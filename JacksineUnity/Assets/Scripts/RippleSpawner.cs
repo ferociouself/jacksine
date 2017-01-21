@@ -21,15 +21,16 @@ public class RippleSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-
-		if (Input.GetButtonDown ("Shoot")) {
-			Debug.Log ("Shooting!");
+		if (Input.GetButtonDown("Shoot"))
+        {
 			Vector3 posVec;
 			if (useEyeTracking) {
 				GazePoint point = EyeTracking.GetGazePoint ();
-				posVec = (Camera.main.ScreenToWorldPoint ((Vector3)point.Screen));
-			} else {
+                if(point.Timestamp > Time.time - (10 * Time.deltaTime))
+				    posVec = (Camera.main.ScreenToWorldPoint ((Vector3)point.Screen));
+                else
+                    posVec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            } else {
 				posVec = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			}
 			posVec.z = 0;
