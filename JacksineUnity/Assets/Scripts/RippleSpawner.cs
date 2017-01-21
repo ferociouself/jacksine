@@ -6,10 +6,13 @@ using Tobii.EyeTracking;
 public class RippleSpawner : MonoBehaviour {
 
 	public bool useEyeTracking = true;
+	public float time;
     ObjectController objCont;
 
 	// Use this for initialization
 	void Start () {
+		time = 0;
+		Debug.Log ("Time Scale: " + Time.timeScale);
         objCont = gameObject.GetComponent<ObjectController>();
 		if (useEyeTracking) {
 			EyeTracking.Initialize ();
@@ -26,8 +29,24 @@ public class RippleSpawner : MonoBehaviour {
                 if(point.Timestamp > Time.time - (10 * Time.deltaTime))
 				    posVec = (Camera.main.ScreenToWorldPoint((Vector3)point.Screen));
 			}
-            posVec.z = 0;
-            objCont.CreateRipple((Vector2)posVec);
-        }
+			posVec.z = 0;
+			GameObject ripple = objCont.CreateRipple ((Vector2)posVec);
+
+			//scale ripple by time waited
+			ripple.transform.GetChild (0).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
+			ripple.transform.GetChild (1).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
+			ripple.transform.GetChild (2).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
+			ripple.transform.GetChild (3).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
+
+
+			time=0; 
+
+
+		} else {
+
+			if(time<=5.0f){
+			time+=Time.deltaTime;
+			}
+		}
 	}
 }

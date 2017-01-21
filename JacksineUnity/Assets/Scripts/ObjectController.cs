@@ -14,12 +14,13 @@ public class ObjectController : MonoBehaviour {
 		
 	}
 
-    public void CreateRipple(Vector2 point)
+	public GameObject CreateRipple(Vector2 point)
     {
         int rand = Random.Range(0, 6);
         GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
 
         rippleObj1.transform.position = point;
+		return rippleObj1;
     }
 }
