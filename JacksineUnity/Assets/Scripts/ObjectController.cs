@@ -16,11 +16,10 @@ public class ObjectController : MonoBehaviour {
 
 	public GameObject CreateRipple(Vector2 point)
     {
-        GameObject ripple = (GameObject)(Resources.Load("Prefabs/Ripples/ripple 0", typeof(GameObject)));
-        GameObject rippleObj1 = GameObject.Instantiate(ripple);
+        GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
+        GameObject rippleObj1 = Instantiate(ripple);
 
-        Vector3 tranVec = (Vector3)point;
-
+        Vector3 tranVec = new Vector3(point.x, point.y, 4);
         rippleObj1.transform.position = tranVec;
 
         AudioSource source = GetComponent<AudioSource>();

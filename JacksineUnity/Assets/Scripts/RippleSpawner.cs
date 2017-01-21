@@ -26,10 +26,9 @@ public class RippleSpawner : MonoBehaviour {
 			if (useEyeTracking) {
 				GazePoint point = EyeTracking.GetGazePoint();
                 if(point.Timestamp > Time.time - (10 * Time.deltaTime))
-				    posVec = (Camera.main.ScreenToWorldPoint((Vector3)point.Screen));
+				    posVec = (Camera.main.ScreenToWorldPoint(point.Screen));
 			}
-			posVec.z = 0;
-			GameObject ripple = objCont.CreateRipple ((Vector2)posVec);
+			GameObject ripple = objCont.CreateRipple (posVec);
 
 			//scale ripple by time waited
 			ripple.transform.GetChild (0).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
