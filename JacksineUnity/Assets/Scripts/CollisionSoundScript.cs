@@ -23,10 +23,16 @@ public class CollisionSoundScript : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Ripple")
         {
+            
             AudioSource source = gameObject.GetComponent<AudioSource>();
-            float timeLeft = coll.gameObject.GetComponent<RippleHitObject>().getTimeLeft();
-            source.pitch = timeLeft;
-            source.Play();
+            if (!source.isPlaying)
+            {
+                float timeLeft = coll.gameObject.GetComponent<RippleHitObject>().getTimeLeft();
+                int rand = Random.Range(1, 8);
+                source.clip = (AudioClip)(Resources.Load("Audio/Hit" + ((((int)(10 * timeLeft)) % 7) + 1), typeof(AudioClip)));
+                //source.clip = (AudioClip)(Resources.Load("Audio/Hit" + rand, typeof(AudioClip)));
+                source.Play();
+            }
         }
     }
 }
