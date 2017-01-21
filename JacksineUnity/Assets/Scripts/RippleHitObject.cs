@@ -27,7 +27,6 @@ public class RippleHitObject : MonoBehaviour {
         if (timeleft < 0.0f)
         {
             timeleft = 0.0f;
-            print("timepassed is done");
         }
 	}
 

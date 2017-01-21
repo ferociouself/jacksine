@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KeepInBounds : MonoBehaviour {
 
-    public static float FORCE = 1.0f;
+    public float force = 1.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -18,23 +18,19 @@ public class KeepInBounds : MonoBehaviour {
         Vector2 topRight = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
         if (pos.x < botLeft.x)
         {
-            print("out left");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.right * FORCE);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * force);
         }
         if (pos.x >= topRight.x)
         {
-            print("out right");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.left * FORCE);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.left * force);
         }
         if (pos.y < botLeft.y)
         {
-            print("out bottom");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.up * FORCE);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * force);
         }
         if (pos.y >= topRight.y)
         {
-            print("out top");
-            GetComponent<Rigidbody2D>().AddForce(Vector2.down * FORCE);
+            GetComponent<Rigidbody2D>().AddForce(Vector2.down * force);
         }
 	}
 }
