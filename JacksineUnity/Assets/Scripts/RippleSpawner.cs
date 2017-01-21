@@ -6,7 +6,7 @@ using Tobii.EyeTracking;
 public class RippleSpawner : MonoBehaviour {
 
 	public bool useEyeTracking = true;
-	public float time;
+	private float time;
     ObjectController objCont;
 
 	// Use this for initialization

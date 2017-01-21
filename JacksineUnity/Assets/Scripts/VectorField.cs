@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class VectorField : MonoBehaviour {
 
-	public float forceMultiplier;
+	public float forceMultiplier;		// coefficient for force vector to move the foods
 	public int width;
-	public int height;
-	public TextAsset vectorFile;
+	public int height;					// dimensions of vector field
+	public bool willShiftHorizontally;	// whether the vector field will move horizontally during gameplay
+	public bool willShiftVertically;	// whether the vector field will move vertically during gameplay
+	public TextAsset vectorFile;		// reference to text field containing 2D width x height floats
 
 	public float applyForceThreshold;	// time between force application
+	public float shiftFieldThreshold;	// time between moving vector field
+
 	private float applyForceTimer;
+	private float shiftFieldTimer;
 	private Vector2[,] field;
+	private int shiftCounter = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +55,17 @@ public class VectorField : MonoBehaviour {
 				var iy = (int)(height - qy * height);
 
 				if (ix >= 0 && ix <= width - 1 && iy >= 0 && iy <= height - 1) {
+					if (shiftFieldTimer >= shiftFieldThreshold) {
+						int num = (int)(shiftFieldTimer / shiftFieldThreshold);
+						shiftCounter += num;
+						shiftFieldTimer -= num * shiftFieldThreshold;
+					}
+					if (willShiftHorizontally) {
+						ix = (ix + shiftCounter) % width;
+					}
+					if (willShiftVertically) {
+						iy = (iy + shiftCounter) % height;
+					}
 					Vector2 dir = field [iy, ix];
 					obj.GetComponent<Rigidbody2D> ().AddForce (dir * forceMultiplier);
 				}
@@ -56,5 +73,6 @@ public class VectorField : MonoBehaviour {
 			applyForceTimer = 0.0f;
 		}
 		applyForceTimer += Time.deltaTime;
+		shiftFieldTimer += Time.deltaTime;
 	}
 }
