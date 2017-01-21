@@ -22,17 +22,5 @@ public class ObjectController : MonoBehaviour {
         Vector3 tranVec = (Vector3)point;
 
         rippleObj1.transform.position = tranVec;
-        GameObject rippleObj2 = GameObject.Instantiate(ripple);
-
-        tranVec.z = -2;
-        rippleObj2.transform.position = tranVec;
-        rippleObj2.transform.localScale = 0.75f * rippleObj2.transform.localScale;
-        rippleObj2.GetComponent<Embiggener>().sinOffset = 0.5f;
-        GameObject rippleObj3 = GameObject.Instantiate(ripple);
-
-        tranVec.z = -5;
-        rippleObj3.transform.position = tranVec;
-        rippleObj3.transform.localScale = 0.5f * rippleObj3.transform.localScale;
-        rippleObj3.GetComponent<Embiggener>().sinOffset = 1.5f;
     }
 }

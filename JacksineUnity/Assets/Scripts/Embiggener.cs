@@ -26,6 +26,9 @@ public class Embiggener : MonoBehaviour {
         {
             GameObject.Destroy(this.gameObject);
         }
+        float sizeRatio = 1 - (curSize / maxSize);
+        Color curColor = gameObject.GetComponent<SpriteRenderer>().color;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(curColor.r, curColor.g, curColor.b, sizeRatio);
         sinRot += Time.deltaTime * 10.0f;
 	}
 }
