@@ -11,6 +11,8 @@ public class MovementBleepScript : MonoBehaviour {
 	public float hiThreshold;
 	public float cooldownThreshold;	// amount of time between audio play
 
+    public float minSpeed;
+
 	private Rigidbody2D body;
 	private float pitch;
 	private float cooldownTimer;
@@ -25,7 +27,7 @@ public class MovementBleepScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float speed = body.velocity.magnitude*speedMultiplier;
-		if (speed > 0.001 && cooldownTimer >= cooldownThreshold) {
+		if (speed > minSpeed && cooldownTimer >= cooldownThreshold) {
 			AudioSource audio = this.GetComponent < AudioSource> ();
 			if (speed > hiThreshold) {
 				audio.pitch = hiPitch;

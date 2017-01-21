@@ -13,6 +13,8 @@ public class Embiggener : MonoBehaviour {
     float sinRot = 0.0f;
     public float sinOffset = 0.0f;
 
+    float curSizeInc;
+
 	// Use this for initialization
 	void Start () {
         sinRot += sinOffset;
@@ -20,8 +22,9 @@ public class Embiggener : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.localScale *= bigSpeed + Mathf.Abs((Mathf.Sin(sinRot) / sinDampener));
-        curSize *= bigSpeed + Mathf.Abs((Mathf.Sin(sinRot) / sinDampener));
+        curSizeInc = bigSpeed + Mathf.Abs((Mathf.Sin(sinRot) / sinDampener));
+        transform.localScale *= curSizeInc;
+        curSize *= curSizeInc;
         if (curSize > maxSize)
         {
             GameObject.Destroy(this.gameObject);
@@ -31,4 +34,9 @@ public class Embiggener : MonoBehaviour {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(curColor.r, curColor.g, curColor.b, sizeRatio);
         sinRot += Time.deltaTime * 10.0f;
 	}
+
+    public float getCurSizeInc()
+    {
+        return curSizeInc;
+    }
 }

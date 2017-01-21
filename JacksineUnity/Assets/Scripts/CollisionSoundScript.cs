@@ -18,4 +18,15 @@ public class CollisionSoundScript : MonoBehaviour {
 		if (coll.gameObject.tag == "Food")
 			this.gameObject.GetComponent<AudioSource> ().Play ();
 	}
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "ripple")
+        {
+            AudioSource source = gameObject.GetComponent<AudioSource>();
+            float timeLeft = coll.gameObject.GetComponent<RippleHitObject>().getTimeLeft();
+            source.pitch = timeLeft;
+            source.Play();
+        }
+    }
 }

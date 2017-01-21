@@ -34,4 +34,9 @@ public class RippleHitObject : MonoBehaviour {
             print("timepassed is done");
         }
 	}
+
+    public float getTimeLeft()
+    {
+        return timeleft;
+    }
 }
