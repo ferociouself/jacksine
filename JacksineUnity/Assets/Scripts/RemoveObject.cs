@@ -39,6 +39,10 @@ public class RemoveObject : MonoBehaviour {
             score += (-1 * scoreModifier); 
         }
         Destroy(other.gameObject);
+        AudioSource source = GetComponent<AudioSource>();
+        int rand = Random.Range(1, 4);
+        source.clip = (AudioClip)(Resources.Load("Audio/Hole" + rand, typeof(AudioClip)));
+        source.Play();
         string textToAdd = "Score: " + score;
         //text = GetComponent<Text>();
         if (text != null)

@@ -16,7 +16,6 @@ public class ObjectController : MonoBehaviour {
 
 	public GameObject CreateRipple(Vector2 point, bool isPushing)
     {
-        int rand = Random.Range(0, 6);
         GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
         if (isPushing)
@@ -30,6 +29,18 @@ public class ObjectController : MonoBehaviour {
             //rippleObj1.gameObject.tag = "pullRipple";
         }
         rippleObj1.transform.position = point;
-		return rippleObj1;
+
+        Vector3 tranVec = new Vector3(point.x, point.y, 4);
+        rippleObj1.transform.position = tranVec;
+
+        AudioSource source = GetComponent<AudioSource>();
+        if (source != null)
+        {
+            int rand = Random.Range(1, 5);
+            source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
+            source.Play();
+        }
+
+        return rippleObj1;
     }
 }
