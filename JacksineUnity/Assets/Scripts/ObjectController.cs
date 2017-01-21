@@ -16,12 +16,16 @@ public class ObjectController : MonoBehaviour {
 
     public void CreateRipple(Vector2 point)
     {
-        int rand = Random.Range(0, 6);
         GameObject ripple = (GameObject)(Resources.Load("Prefabs/Ripples/ripple 0", typeof(GameObject)));
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
 
         Vector3 tranVec = (Vector3)point;
 
         rippleObj1.transform.position = tranVec;
+
+        AudioSource source = GetComponent<AudioSource>();
+        int rand = Random.Range(1, 5);
+        source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
+        source.Play();
     }
 }

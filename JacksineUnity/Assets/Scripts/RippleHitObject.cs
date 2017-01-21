@@ -28,7 +28,7 @@ public class RippleHitObject : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        timepassed += 0.01f;
+        timepassed += Time.deltaTime;
         timeleft = 2.0f - timepassed;
         if (timeleft < 0.0f)
         {

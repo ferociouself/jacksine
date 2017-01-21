@@ -17,5 +17,9 @@ public class RemoveObject : MonoBehaviour {
     public void OnTriggerEnter2D (Collider2D other)
     {
         Destroy(other.gameObject);
+        AudioSource source = GetComponent<AudioSource>();
+        int rand = Random.Range(1, 4);
+        source.clip = (AudioClip)(Resources.Load("Audio/Hole" + rand, typeof(AudioClip)));
+        source.Play();
     }
 }
