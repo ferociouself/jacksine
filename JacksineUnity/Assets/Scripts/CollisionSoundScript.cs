@@ -16,17 +16,24 @@ public class CollisionSoundScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Food")
-			this.gameObject.GetComponent<AudioSource> ().Play ();
+            if (!GetComponent<AudioSource>().isPlaying)
+			    this.gameObject.GetComponent<AudioSource> ().Play ();
 	}
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "ripple")
+        if (coll.gameObject.tag == "Ripple")
         {
+            
             AudioSource source = gameObject.GetComponent<AudioSource>();
-            float timeLeft = coll.gameObject.GetComponent<RippleHitObject>().getTimeLeft();
-            source.pitch = timeLeft;
-            source.Play();
+            if (!source.isPlaying)
+            {
+                float timeLeft = coll.gameObject.GetComponent<RippleHitObject>().getTimeLeft();
+                int rand = Random.Range(1, 8);
+                source.clip = (AudioClip)(Resources.Load("Audio/Hit" + ((((int)(10 * timeLeft)) % 7) + 1), typeof(AudioClip)));
+                //source.clip = (AudioClip)(Resources.Load("Audio/Hit" + rand, typeof(AudioClip)));
+                source.Play();
+            }
         }
     }
 }

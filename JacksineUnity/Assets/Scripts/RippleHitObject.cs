@@ -6,32 +6,27 @@ public class RippleHitObject : MonoBehaviour {
 
     public float timepassed;
     public float timeleft;
+    public float power;
 
 	// Use this for initialization
 	void Start () {
-	    	
 	}
-
-    public void OnTriggerEnter2D(Collider2D blob)
-    {
-        blob.GetComponent<Rigidbody2D>().AddForce(timeleft * Vector2.right * (blob.GetComponent<Rigidbody2D>().transform.position.x - this.transform.position.x));
-        blob.GetComponent<Rigidbody2D>().AddForce(timeleft * Vector2.up * (blob.GetComponent<Rigidbody2D>().transform.position.y - this.transform.position.y));
-    }
 
     public void OnTriggerStay2D(Collider2D blob)
     {
-        blob.GetComponent<Rigidbody2D>().AddForce(timeleft * Vector2.right * (blob.GetComponent<Rigidbody2D>().transform.position.x - this.transform.position.x));
-        blob.GetComponent<Rigidbody2D>().AddForce(timeleft * Vector2.up * (blob.GetComponent<Rigidbody2D>().transform.position.y - this.transform.position.y));
+        if (blob.tag == "Food")
+        {
+            blob.GetComponent<Rigidbody2D>().AddForce(timeleft * (blob.GetComponent<Rigidbody2D>().transform.position - transform.position) * power);
+        }
     }
 
     // Update is called once per frame
     void Update () {
-        timepassed += 0.01f;
+        timepassed += Time.deltaTime;
         timeleft = 2.0f - timepassed;
         if (timeleft < 0.0f)
         {
             timeleft = 0.0f;
-            print("timepassed is done");
         }
 	}
 
