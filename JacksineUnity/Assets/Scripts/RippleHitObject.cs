@@ -7,16 +7,26 @@ public class RippleHitObject : MonoBehaviour {
     public float timepassed;
     public float timeleft;
     public float power;
+    public float constant;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        //if (this.tag == "pushRipple")
+        //{
+        //    constant = 1.0f;
+        //}
+        //else if (this.tag == "pullRipple")
+        //{
+        //    constant = -1.0f;
+        //}
 	}
 
     public void OnTriggerStay2D(Collider2D blob)
     {
-        if (blob.tag == "Food")
+        if (blob.tag.Contains("ood"))
         {
-            blob.GetComponent<Rigidbody2D>().AddForce(timeleft * (blob.GetComponent<Rigidbody2D>().transform.position - transform.position) * power);
+            blob.GetComponent<Rigidbody2D>().AddForce(constant * timeleft * (blob.GetComponent<Rigidbody2D>().transform.position - transform.position) * power);
         }
     }
 
@@ -27,7 +37,7 @@ public class RippleHitObject : MonoBehaviour {
         if (timeleft < 0.0f)
         {
             timeleft = 0.0f;
-            print("timepassed is done");
+            //print("timepassed is done");
         }
 	}
 

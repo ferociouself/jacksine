@@ -14,12 +14,21 @@ public class ObjectController : MonoBehaviour {
 		
 	}
 
-	public GameObject CreateRipple(Vector2 point)
+	public GameObject CreateRipple(Vector2 point, bool isPushing)
     {
         int rand = Random.Range(0, 6);
         GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
-
+        if (isPushing)
+        {
+            rippleObj1.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().constant = 1.0f;
+            //rippleObj1.gameObject.tag = "pushRipple";
+        }
+        else
+        {
+            rippleObj1.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().constant = -1.0f;
+            //rippleObj1.gameObject.tag = "pullRipple";
+        }
         rippleObj1.transform.position = point;
 		return rippleObj1;
     }
