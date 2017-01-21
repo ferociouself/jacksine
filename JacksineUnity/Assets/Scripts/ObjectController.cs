@@ -17,11 +17,9 @@ public class ObjectController : MonoBehaviour {
     public void CreateRipple(Vector2 point)
     {
         int rand = Random.Range(0, 6);
-        GameObject ripple = (GameObject)(Resources.Load("Prefabs/Ripples/ripple 0", typeof(GameObject)));
+        GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
 
-        Vector3 tranVec = (Vector3)point;
-
-        rippleObj1.transform.position = tranVec;
+        rippleObj1.transform.position = point;
     }
 }

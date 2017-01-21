@@ -15,13 +15,11 @@ public class attract : MonoBehaviour
 
     }
 
-
     public  void OnTriggerEnter2D(Collider2D blob) //the object will be called blob, and this is supposed to signify the event triggerring when the blob collider hits this collider
     {
-        pull(blob);
+        //pull(blob);
         //print("Collision Detected.");
     }
-
 
     public  void OnTriggerStay2D(Collider2D blob) //this is like before but is supposed to indicate that the same method stays when the obect stays
     {
@@ -37,8 +35,7 @@ public class attract : MonoBehaviour
          */
     public void pull(Collider2D blob)
     {
-        blob.GetComponent<Rigidbody2D>().AddForce(Vector2.right * -(blob.GetComponent<Rigidbody2D>().transform.position.x - this.transform.position.x));
-        blob.GetComponent<Rigidbody2D>().AddForce(Vector2.up * -(blob.GetComponent<Rigidbody2D>().transform.position.y - this.transform.position.y));
+        blob.GetComponent<Rigidbody2D>().AddForce(-(blob.GetComponent<Rigidbody2D>().transform.position - transform.position));
         //print("Pull method activated.");
     }
 
