@@ -14,12 +14,12 @@ public class IslandRippleSpawner : MonoBehaviour {
         position = new Vector2(this.transform.position.x, this.transform.position.y);
         rotation = new Quaternion(0, 0, 0, 0);
         cooldown = 0f;
+        ripple.transform.localScale = new Vector3(.025f, .025f, .025f);
     }
 	
     public void spawn()
     {
         GameObject.Instantiate(ripple, position, rotation);
-        ripple.transform.localScale = new Vector3(.025f, .025f, .025f);
         cooldown = 2.0f;
     }
 

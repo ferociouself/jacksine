@@ -14,7 +14,7 @@ public class ObjectController : MonoBehaviour {
 		
 	}
 
-    public void CreateRipple(Vector2 point)
+	public GameObject CreateRipple(Vector2 point)
     {
         GameObject ripple = (GameObject)(Resources.Load("Prefabs/Ripples/ripple 0", typeof(GameObject)));
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
@@ -27,5 +27,6 @@ public class ObjectController : MonoBehaviour {
         int rand = Random.Range(1, 5);
         source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
         source.Play();
+	return rippleObj1;
     }
 }

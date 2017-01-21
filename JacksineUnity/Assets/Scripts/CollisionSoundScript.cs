@@ -21,7 +21,7 @@ public class CollisionSoundScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "ripple")
+        if (coll.gameObject.tag == "Ripple")
         {
             
             AudioSource source = gameObject.GetComponent<AudioSource>();
