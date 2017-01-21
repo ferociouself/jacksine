@@ -12,7 +12,6 @@ public class RippleSpawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		time = 0;
-		Debug.Log ("Time Scale: " + Time.timeScale);
         objCont = gameObject.GetComponent<ObjectController>();
 		if (useEyeTracking) {
 			EyeTracking.Initialize ();
