@@ -10,12 +10,29 @@ public class MainMenuController : MonoBehaviour {
     private bool beginning = false;
     private float beginTimer = 0.0f;
 
+	bool starting = false;
+
 	public GameObject logo;
 	public GameObject beginText;
+	public GameObject vectorField;
+
+	public GameObject ZenSelect;
+	public GameObject MainSelect;
+	public GameObject instButton;
+	public GameObject startButton;
+
+	public GameObject ZenGaze;
+	public GameObject MainGaze;
 
 	bool menuActive = false;
 
 	bool begun = false;
+
+	public bool zenMove = false;
+	public bool mainMove = false;
+
+	float curZenX = 0.0f;
+	float curMainX = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,21 +40,37 @@ public class MainMenuController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (begun)
-        {
-            beginTimer += Time.deltaTime;
-			if (beginTimer > transitionTime)
-            {
-				//Switch to first scene
-				SceneManager.LoadScene(1);
-            }
-        }
 		if (beginning && !begun) {
 			TurnOffLogo();
 		}
 		if (Input.GetButtonDown ("Shoot") && !beginning) {
 			BeginGame ();
 		}
+		if (pos_Lerping) {
+			PosTimedLerp();
+		}
+
+
+		if (zenMove) {
+			MoveZen(-1);
+		} else if (ZenSelect.GetComponent<RectTransform>().anchoredPosition.x < 15.3) {
+			MoveZen(1);
+		}
+		if (ZenSelect.GetComponent<RectTransform>().anchoredPosition.x < -500 && !starting) {
+			StartZen();
+			starting = true;
+		}
+
+		if (mainMove) {
+			MoveMain(1);
+		} else if (MainSelect.GetComponent<RectTransform>().anchoredPosition.x > -15.3) {
+			MoveMain(-1);
+		}
+		if (MainSelect.GetComponent<RectTransform>().anchoredPosition.x > 500 && !starting) {
+			StartMain();
+			starting = true;
+		}
+
 	}
 
     public void BeginGame()
@@ -52,14 +85,42 @@ public class MainMenuController : MonoBehaviour {
             rippleObj.transform.localScale *= 3.0f;
             rippleObj.transform.position = new Vector3(0.0f, -3.85f, 0.0f);
 
-
+			vectorField.GetComponent<VectorField>().forceMultiplier = 100.0f;
         }
     }
+
+	void StartZen() {
+		Camera.main.GetComponent<NoiseTransition>().sceneDestinationId = 4;
+		Camera.main.GetComponent<NoiseTransition>().BeginTransition();
+	}
+
+	void StartMain() {
+		Camera.main.GetComponent<NoiseTransition>().sceneDestinationId = 1;
+		Camera.main.GetComponent<NoiseTransition>().BeginTransition();
+	}
 
 	public void TurnOffLogo() {
 		if (ColTimedLerp()) {
 			menuActive = true;
 			//Turn on new buttons
+			instButton.SetActive(true);
+			startButton.SetActive(true);
+
+			ZenGaze.SetActive(true);
+			MainGaze.SetActive(true);
+
+			Debug.Log(ZenSelect.GetComponent<RectTransform>().position);
+			Debug.Log(MainSelect.GetComponent<RectTransform>().position);
+
+			initZenPos = ZenSelect.GetComponent<RectTransform>().anchoredPosition;
+			initMainPos = MainSelect.GetComponent<RectTransform>().anchoredPosition;
+			finalZenPos = new Vector2(12.8f, 0.0f);
+			finalMainPos = new Vector2(-12.8f, 0.0f);
+			curZenX = 12.8f;
+			curMainX = -12.8f;
+			pos_Lerping = true;
+
+
 			begun = true;
 		}
 	}
@@ -87,6 +148,43 @@ public class MainMenuController : MonoBehaviour {
 		}
 	}
 
+	bool pos_Lerping = false;
+	public const float POS_LERP_TIME = 2.0f;
+	float pos_transTime = 0.0f;
 
+	Vector2 initZenPos;
+	Vector2 finalZenPos;
+
+	Vector2 initMainPos;
+	Vector2 finalMainPos;
+
+
+	public bool PosTimedLerp() {
+
+		float timerVal = pos_transTime / POS_LERP_TIME;
+
+		ZenSelect.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(initZenPos, finalZenPos, timerVal);
+		MainSelect.GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(initMainPos, finalZenPos, timerVal);
+
+		if (pos_transTime > POS_LERP_TIME) {
+			pos_transTime = 0.0f;
+			pos_Lerping = false;
+			return true;
+		}  else {
+			pos_transTime += Time.deltaTime;
+			return false;
+		}
+	}
+
+	public void MoveZen(int dir) {
+		curZenX += dir * 5.0f;
+		ZenSelect.GetComponent<RectTransform>().anchoredPosition = new Vector2(curZenX, 0.0f);
+		Debug.Log("Move Zen" + curZenX);
+	}
+
+	public void MoveMain(int dir) {
+		curMainX += dir * 5.0f;
+		MainSelect.GetComponent<RectTransform>().anchoredPosition = new Vector2(curMainX, 0.0f);
+	}
 
 }
