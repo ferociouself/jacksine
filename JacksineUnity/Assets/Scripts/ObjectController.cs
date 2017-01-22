@@ -14,18 +14,33 @@ public class ObjectController : MonoBehaviour {
 		
 	}
 
-	public GameObject CreateRipple(Vector2 point)
+	public GameObject CreateRipple(Vector2 point, bool isPushing)
     {
         GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
-        GameObject rippleObj1 = Instantiate(ripple);
+        GameObject rippleObj1 = GameObject.Instantiate(ripple);
+        if (isPushing)
+        {
+            rippleObj1.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().constant = 1.0f;
+            //rippleObj1.gameObject.tag = "pushRipple";
+        }
+        else
+        {
+            rippleObj1.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().constant = -1.0f;
+            //rippleObj1.gameObject.tag = "pullRipple";
+        }
+        rippleObj1.transform.position = point;
 
         Vector3 tranVec = new Vector3(point.x, point.y, 4);
         rippleObj1.transform.position = tranVec;
 
         AudioSource source = GetComponent<AudioSource>();
-        int rand = Random.Range(1, 5);
-        source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
-        source.Play();
-	return rippleObj1;
+        if (source != null)
+        {
+            int rand = Random.Range(1, 5);
+            source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
+            source.Play();
+        }
+
+        return rippleObj1;
     }
 }
