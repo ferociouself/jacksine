@@ -27,7 +27,7 @@ public class Embiggener : MonoBehaviour {
         curSize *= curSizeInc;
         if (curSize > maxSize)
         {
-            GameObject.Destroy(this.gameObject);
+            Destroy(transform.parent.gameObject);
         }
         float sizeRatio = 1 - (curSize / maxSize);
         Color curColor = gameObject.GetComponent<SpriteRenderer>().color;
