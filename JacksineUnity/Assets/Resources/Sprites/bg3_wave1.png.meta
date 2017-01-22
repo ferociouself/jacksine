@@ -1,9 +1,129 @@
 fileFormatVersion: 2
 guid: 1d61e7057b76dcd418d2412211609369
-timeCreated: 1485042813
+timeCreated: 1485056037
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: bg3_wave1_0
+    21300002: bg3_wave1_1
+    21300004: bg3_wave1_2
+    21300006: bg3_wave1_3
+    21300008: bg3_wave1_4
+    21300010: bg3_wave1_5
+    21300012: bg3_wave1_6
+    21300014: bg3_wave1_7
+    21300016: bg3_wave1_8
+    21300018: bg3_wave1_9
+    21300020: bg3_wave1_10
+    21300022: bg3_wave1_11
+    21300024: bg3_wave1_12
+    21300026: bg3_wave1_13
+    21300028: bg3_wave1_14
+    21300030: bg3_wave1_15
+    21300032: bg3_wave1_16
+    21300034: bg3_wave1_17
+    21300036: bg3_wave1_18
+    21300038: bg3_wave1_19
+    21300040: bg3_wave1_20
+    21300042: bg3_wave1_21
+    21300044: bg3_wave1_22
+    21300046: bg3_wave1_23
+    21300048: bg3_wave1_24
+    21300050: bg3_wave1_25
+    21300052: bg3_wave1_26
+    21300054: bg3_wave1_27
+    21300056: bg3_wave1_28
+    21300058: bg3_wave1_29
+    21300060: bg3_wave1_30
+    21300062: bg3_wave1_31
+    21300064: bg3_wave1_32
+    21300066: bg3_wave1_33
+    21300068: bg3_wave1_34
+    21300070: bg3_wave1_35
+    21300072: bg3_wave1_36
+    21300074: bg3_wave1_37
+    21300076: bg3_wave1_38
+    21300078: bg3_wave1_39
+    21300080: bg3_wave1_40
+    21300082: bg3_wave1_41
+    21300084: bg3_wave1_42
+    21300086: bg3_wave1_43
+    21300088: bg3_wave1_44
+    21300090: bg3_wave1_45
+    21300092: bg3_wave1_46
+    21300094: bg3_wave1_47
+    21300096: bg3_wave1_48
+    21300098: bg3_wave1_49
+    21300100: bg3_wave1_50
+    21300102: bg3_wave1_51
+    21300104: bg3_wave1_52
+    21300106: bg3_wave1_53
+    21300108: bg3_wave1_54
+    21300110: bg3_wave1_55
+    21300112: bg3_wave1_56
+    21300114: bg3_wave1_57
+    21300116: bg3_wave1_58
+    21300118: bg3_wave1_59
+    21300120: bg3_wave1_60
+    21300122: bg3_wave1_61
+    21300124: bg3_wave1_62
+    21300126: bg3_wave1_63
+    21300128: bg3_wave1_64
+    21300130: bg3_wave1_65
+    21300132: bg3_wave1_66
+    21300134: bg3_wave1_67
+    21300136: bg3_wave1_68
+    21300138: bg3_wave1_69
+    21300140: bg3_wave1_70
+    21300142: bg3_wave1_71
+    21300144: bg3_wave1_72
+    21300146: bg3_wave1_73
+    21300148: bg3_wave1_74
+    21300150: bg3_wave1_75
+    21300152: bg3_wave1_76
+    21300154: bg3_wave1_77
+    21300156: bg3_wave1_78
+    21300158: bg3_wave1_79
+    21300160: bg3_wave1_80
+    21300162: bg3_wave1_81
+    21300164: bg3_wave1_82
+    21300166: bg3_wave1_83
+    21300168: bg3_wave1_84
+    21300170: bg3_wave1_85
+    21300172: bg3_wave1_86
+    21300174: bg3_wave1_87
+    21300176: bg3_wave1_88
+    21300178: bg3_wave1_89
+    21300180: bg3_wave1_90
+    21300182: bg3_wave1_91
+    21300184: bg3_wave1_92
+    21300186: bg3_wave1_93
+    21300188: bg3_wave1_94
+    21300190: bg3_wave1_95
+    21300192: bg3_wave1_96
+    21300194: bg3_wave1_97
+    21300196: bg3_wave1_98
+    21300198: bg3_wave1_99
+    21300200: bg3_wave1_100
+    21300202: bg3_wave1_101
+    21300204: bg3_wave1_102
+    21300206: bg3_wave1_103
+    21300208: bg3_wave1_104
+    21300210: bg3_wave1_105
+    21300212: bg3_wave1_106
+    21300214: bg3_wave1_107
+    21300216: bg3_wave1_108
+    21300218: bg3_wave1_109
+    21300220: bg3_wave1_110
+    21300222: bg3_wave1_111
+    21300224: bg3_wave1_112
+    21300226: bg3_wave1_113
+    21300228: bg3_wave1_114
+    21300230: bg3_wave1_115
+    21300232: bg3_wave1_116
+    21300234: bg3_wave1_117
+    21300236: bg3_wave1_118
+    21300238: bg3_wave1_119
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -27,14 +147,14 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +178,1577 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bg3_wave1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_2
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_3
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_4
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_5
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_6
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_7
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 7652
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_9
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_11
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_13
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_14
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_15
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 7112
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_17
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_18
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_19
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_20
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_21
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_22
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_23
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 6572
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_25
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_26
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_27
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_28
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_29
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_30
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_31
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 6032
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_33
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_34
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_35
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_36
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_37
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_38
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_39
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 5492
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_41
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_42
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_43
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_44
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_45
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_46
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_47
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 4952
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_49
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_50
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_51
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_52
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_53
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_54
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_55
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 4412
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_57
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_58
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_59
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_60
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_61
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_62
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_63
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 3872
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_65
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_66
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_67
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_68
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_69
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_70
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_71
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 3332
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_73
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_74
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_75
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_76
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_77
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_78
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_79
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 2792
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_81
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_82
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_83
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_84
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_85
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_86
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_87
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 2252
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_89
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_90
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_91
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_92
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_93
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_94
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_95
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 1712
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_97
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_98
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_99
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_100
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_101
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_102
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_103
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 1172
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_105
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_106
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_107
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_108
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_109
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_110
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_111
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 632
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_113
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_114
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_115
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_116
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_117
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_118
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bg3_wave1_119
+      rect:
+        serializedVersion: 2
+        x: 6720
+        y: 92
+        width: 960
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
