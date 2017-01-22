@@ -38,7 +38,7 @@ public class RemoveObject : MonoBehaviour {
         {
             score += (-1 * scoreModifier); 
         }
-        Destroy(other.gameObject);
+        //Destroy(other.gameObject);
         AudioSource source = GetComponent<AudioSource>();
         int rand = Random.Range(1, 4);
         source.clip = (AudioClip)(Resources.Load("Audio/Hole" + rand, typeof(AudioClip)));
