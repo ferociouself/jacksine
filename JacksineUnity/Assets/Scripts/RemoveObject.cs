@@ -7,10 +7,19 @@ public class RemoveObject : MonoBehaviour {
 
     public int score = 0;
     public Text text;
+    public bool isEvil;
+    public int scoreModifier = 0;
 
 	// Use this for initialization
 	void Start () {
-		
+		if (isEvil)
+        {
+            scoreModifier = -1;
+        }
+        else
+        {
+            scoreModifier = 1;
+        }
 	}
 	
 	// Update is called once per frame
@@ -23,11 +32,11 @@ public class RemoveObject : MonoBehaviour {
     {
         if (other.tag.Contains("good"))
         {
-            score++;
+            score += (1 * scoreModifier);
         }
         else if (other.tag.Contains("bad"))
         {
-            score--;
+            score += (-1 * scoreModifier); 
         }
         Destroy(other.gameObject);
         AudioSource source = GetComponent<AudioSource>();
@@ -36,6 +45,9 @@ public class RemoveObject : MonoBehaviour {
         source.Play();
         string textToAdd = "Score: " + score;
         //text = GetComponent<Text>();
-        text.text = textToAdd;
+        if (text != null)
+        {
+            text.text = textToAdd;
+        }
     }
 }

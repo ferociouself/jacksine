@@ -9,6 +9,8 @@ using System.Collections;
 public class attract : MonoBehaviour
 {      //aight this method is supposed to apply force to an object when its collider hits the circle collider
 
+    
+
     // Use this for initialization
     void Start()
     {

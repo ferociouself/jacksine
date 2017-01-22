@@ -7,6 +7,7 @@ public class RippleSpawner : MonoBehaviour {
 
 	public bool useEyeTracking = true;
 	private float time;
+    public bool isPushing;
     ObjectController objCont;
 
 	// Use this for initialization
@@ -16,6 +17,7 @@ public class RippleSpawner : MonoBehaviour {
 		if (useEyeTracking) {
 			EyeTracking.Initialize ();
 		}
+
 	}
 	
 	// Update is called once per frame
@@ -28,7 +30,8 @@ public class RippleSpawner : MonoBehaviour {
                 if(point.Timestamp > Time.time - (10 * Time.deltaTime))
 				    posVec = (Camera.main.ScreenToWorldPoint(point.Screen));
 			}
-			GameObject ripple = objCont.CreateRipple (posVec);
+			posVec.z = 0;
+			GameObject ripple = objCont.CreateRipple ((Vector2)posVec, isPushing);
 
 			//scale ripple by time waited
 			ripple.transform.GetChild (0).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
