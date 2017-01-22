@@ -21,19 +21,20 @@ public class AsteroidRippleSpawner : MonoBehaviour {
         rotation = new Quaternion(0, 0, 0, 0);
         cooldown = 0f;
         ripple.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-        ripple.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().constant = -1.0f;
-        ripple.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().power = 0.05f;
-        ripple.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().timeleft = 0.5f;
+        RippleHitObject obj = ripple.transform.GetChild(0).GetComponent<RippleHitObject>();
+        obj.constant = -1.0f;
+        obj.power = 0.05f;
+        obj.timeleft = 0.5f;
         
         
     }
 	
     void startMove()
     {
-        if (delay < timespent && !hasStarted)
+        if (delay <= timespent && !hasStarted)
         {
             Vector2 dir = new Vector2(accelX, accelY);
-            this.GetComponent<Rigidbody2D>().AddForce(dir);
+            GetComponent<Rigidbody2D>().AddForce(dir);
             hasStarted = true;
         }
     }
