@@ -18,7 +18,7 @@ public class CollisionSoundScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag.Contains("ood")) {
-            if (!GetComponent<AudioSource>().isPlaying)
+			if (GetComponent<AudioSource>() != null && !GetComponent<AudioSource>().isPlaying)
             {
 				if (coll.gameObject.GetComponent<AudioSource>() != null && !coll.gameObject.GetComponent<AudioSource>().isPlaying) {
 	                int rand = Random.Range(1, 8);
