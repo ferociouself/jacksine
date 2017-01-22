@@ -13,6 +13,8 @@ public class AsteroidRippleSpawner : MonoBehaviour {
     public float accelX;
     public float accelY;
 
+    public float ripplePower;
+
 
     // Use this for initialization
     void Start ()
@@ -20,10 +22,10 @@ public class AsteroidRippleSpawner : MonoBehaviour {
         position = new Vector2(this.transform.position.x, this.transform.position.y);
         rotation = new Quaternion(0, 0, 0, 0);
         cooldown = 0f;
-        ripple.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        ripple.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
         RippleHitObject obj = ripple.transform.GetChild(0).GetComponent<RippleHitObject>();
         obj.constant = -1.0f;
-        obj.power = 0.025f;
+        obj.power = ripplePower;
         obj.timeleft = 0.5f;
         
         
