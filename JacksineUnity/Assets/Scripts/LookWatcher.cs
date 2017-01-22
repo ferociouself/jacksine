@@ -8,6 +8,10 @@ public class LookWatcher : MonoBehaviour {
 
     GazeAware gaze;
 
+	bool mousing = false;
+
+	public string choice;
+
     public GameObject mainMenuCont;
 
 	// Use this for initialization
@@ -17,9 +21,22 @@ public class LookWatcher : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gaze.HasGazeFocus)
+		switch (choice) {
+		case "Zen":
+			mainMenuCont.GetComponent<MainMenuController>().zenMove = gaze.HasGazeFocus || mousing;
+			break;
+		case "Main":
+			mainMenuCont.GetComponent<MainMenuController>().mainMove = gaze.HasGazeFocus || mousing;
+			break;
+		}
+		if (gaze.HasGazeFocus && choice == "Begin")
         {
-           mainMenuCont.GetComponent<MainMenuController>().BeginGame();
+			gameObject.SetActive(false);
+			mainMenuCont.GetComponent<MainMenuController>().BeginGame();
         }
 	}
+
+	void OnMouseEnter() { mousing = true; Debug.Log("Mouse Enter"); }
+
+	void OnMouseExit() { mousing = false; }
 }
