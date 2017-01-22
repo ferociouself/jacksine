@@ -6,49 +6,56 @@ using Tobii.EyeTracking;
 public class RippleSpawner : MonoBehaviour {
 
 	public bool useEyeTracking = true;
-	private float time;
-    public bool isPushing;
-    public float power;
+	public bool isPushing;
+	public float minPower;
+	public float maxPower;
+	public float minRippleMultiplier;
+	public float maxRippleMultiplier;
+	public float timeToMaxPower;
+
+	private float chargeTime;
+	private bool isCharging;
+	private Vector3 posVec;
     ObjectController objCont;
 
 	// Use this for initialization
 	void Start () {
-		time = 0;
         objCont = gameObject.GetComponent<ObjectController>();
+		chargeTime = 0f;
+		isCharging = false;
+		posVec = Vector3.zero;
 		if (useEyeTracking) {
 			EyeTracking.Initialize ();
 		}
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Shoot"))
-        {
-			Vector3 posVec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		if (isCharging) {
+			chargeTime += Time.deltaTime;
+		}
+		if (Input.GetButtonDown ("Shoot")) {
+			posVec = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 			if (useEyeTracking) {
-				GazePoint point = EyeTracking.GetGazePoint();
-                if(point.Timestamp > Time.time - (10 * Time.deltaTime))
-				    posVec = (Camera.main.ScreenToWorldPoint(point.Screen));
+				GazePoint point = EyeTracking.GetGazePoint ();
+				if (point.Timestamp > Time.time - (10 * Time.deltaTime))
+					posVec = (Camera.main.ScreenToWorldPoint (point.Screen));
 			}
-			posVec.z = 0;
+			posVec.z = 0f;
+			isCharging = true;
+			chargeTime = 0f;
+		}
+		if (Input.GetButtonUp ("Shoot")) {
+			float t = Mathf.Max (0f, Mathf.Min (1f, chargeTime / timeToMaxPower));
+			float power = Mathf.Lerp (minPower, maxPower, t);
+			float rippleMultiplier = Mathf.Lerp (minRippleMultiplier, maxRippleMultiplier, t);
 			GameObject ripple = objCont.CreateRipple ((Vector2)posVec, isPushing, power);
 
 			//scale ripple by time waited
-			ripple.transform.GetChild (0).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
-			ripple.transform.GetChild (1).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
-			ripple.transform.GetChild (2).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
-			ripple.transform.GetChild (3).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);
-
-
-			time=0; 
-
-
-		} else {
-
-			if(time<=5.0f){
-			time+=Time.deltaTime;
+			for (int x = 0; x < 4; x++) {
+				ripple.transform.GetChild (x).gameObject.GetComponent<Embiggener> ().maxSize *= rippleMultiplier;
 			}
+			isCharging = false;
 		}
 	}
 }
