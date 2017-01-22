@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour {
 
-    bool beginning = false;
-
-    float beginTimer = 0.0f;
+	public float transitionTime=3.0f;
+    private bool beginning = false;
+    private float beginTimer = 0.0f;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -19,13 +18,15 @@ public class MainMenuController : MonoBehaviour {
 		if (beginning)
         {
             beginTimer += Time.deltaTime;
-            Debug.Log(beginTimer);
-            if (beginTimer > 2.0f)
+			if (beginTimer > transitionTime)
             {
-                SceneManager.LoadScene(1);
-                //Switch to first scene
+				//Switch to first scene
+				SceneManager.LoadScene(1);
             }
         }
+		if (Input.GetButtonDown ("Shoot") && !beginning) {
+			BeginGame ();
+		}
 	}
 
     public void BeginGame()
