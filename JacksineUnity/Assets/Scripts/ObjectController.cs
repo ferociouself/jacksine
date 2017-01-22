@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectController : MonoBehaviour {
-
+    public string level;
 	// Use this for initialization
 	void Start () {
 		
@@ -39,7 +39,7 @@ public class ObjectController : MonoBehaviour {
         if (source != null)
         {
             int rand = Random.Range(1, 5);
-            source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
+            source.clip = (AudioClip)(Resources.Load("Audio/" + level + "Light" + rand, typeof(AudioClip)));
             source.Play();
         }
 

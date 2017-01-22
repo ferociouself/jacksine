@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollisionSoundScript : MonoBehaviour {
 
+    public string level;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,9 +17,13 @@ public class CollisionSoundScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag.Contains("ood")) {
+		if (coll.gameObject.tag.Contains("ood") && level != "Zen") {
             if (!GetComponent<AudioSource>().isPlaying && !coll.gameObject.GetComponent<AudioSource>().isPlaying)
-			    this.gameObject.GetComponent<AudioSource> ().Play ();
+            {
+                int rand = Random.Range(1, 8);
+                this.gameObject.GetComponent<AudioSource>().clip = (AudioClip)(Resources.Load("Audio/2Hit" + rand + "Low", typeof(AudioClip)));
+                this.gameObject.GetComponent<AudioSource>().Play();
+            }
 		}
 	}
 
@@ -30,9 +36,7 @@ public class CollisionSoundScript : MonoBehaviour {
             if (!source.isPlaying)
             {
                 float timeLeft = coll.gameObject.GetComponent<RippleHitObject>().getTimeLeft();
-                int rand = Random.Range(1, 8);
-                source.clip = (AudioClip)(Resources.Load("Audio/2Hit" + ((((int)(10 * timeLeft)) % 7) + 1), typeof(AudioClip)));
-                //source.clip = (AudioClip)(Resources.Load("Audio/Hit" + rand, typeof(AudioClip)));
+                source.clip = (AudioClip)(Resources.Load("Audio/" + ((level == "Zen")?"2":level) + "Hit" + ((((int)(10 * timeLeft)) % 7) + 1), typeof(AudioClip)));
                 source.Play();
             }
         }

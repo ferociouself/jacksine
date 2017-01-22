@@ -28,12 +28,10 @@ public class RemoveObject : MonoBehaviour {
             {
                 GameObject.Find("GLaDOS").GetComponent<GLaDOS>().FoodInHoleChange(1);
                 score += 1;
-                print("Nom! Thanks for feeding the good food to the good whirlpool!");
             }
             else
             {
                 score -= 1;
-                print("Aww. You fed the good whirlpool bad food!");
             }
         }
         else if (other.tag.Contains("bad"))
@@ -42,12 +40,10 @@ public class RemoveObject : MonoBehaviour {
             {
                 GameObject.Find("GLaDOS").GetComponent<GLaDOS>().FoodInHoleChange(1);
                 score += 1;
-                print("Great! You fed the bad food to the bad whirlpool!");
             }
             else
             {
                 score -= 1;
-                print("Too bad! You fed the bad whirlpool good food!");
             }
         }
         //Destroy(other.gameObject);
