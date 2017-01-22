@@ -16,7 +16,7 @@ public class IslandRippleSpawner : MonoBehaviour {
         cooldown = 0f;
         ripple.transform.localScale = new Vector3(.02f, .02f, .02f);
         ripple.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().constant = 1.0f;
-        ripple.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().power = 3.0f;
+        ripple.transform.GetChild(0).gameObject.GetComponent<RippleHitObject>().power = 1.0f;
     }
 	
     public void spawn()

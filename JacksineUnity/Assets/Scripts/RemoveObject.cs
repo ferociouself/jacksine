@@ -26,38 +26,59 @@ public class RemoveObject : MonoBehaviour {
         {
             if (!isEvil)
             {
+                GameObject.Find("GLaDOS").GetComponent<GLaDOS>().FoodInHoleChange(1);
                 score += 1;
-                print("Nom! Thanks for feeding the good food to the good whirlpool!");
             }
             else
             {
                 score -= 1;
-                print("Aww. You fed the good whirlpool bad food!");
             }
         }
         else if (other.tag.Contains("bad"))
         {
             if (isEvil)
             {
+                GameObject.Find("GLaDOS").GetComponent<GLaDOS>().FoodInHoleChange(1);
                 score += 1;
-                print("Great! You fed the bad food to the bad whirlpool!");
             }
             else
             {
                 score -= 1;
-                print("Too bad! You fed the bad whirlpool good food!");
             }
         }
-        Destroy(other.gameObject);
-        //AudioSource source = GetComponent<AudioSource>();
-        //int rand = Random.Range(1, 4);
-        //source.clip = (AudioClip)(Resources.Load("Audio/Hole" + rand, typeof(AudioClip)));
-        //source.Play();
+        //Destroy(other.gameObject);
+        AudioSource source = GetComponent<AudioSource>();
+        if (!source.isPlaying)
+        {
+            int rand = Random.Range(1, 4);
+            source.clip = (AudioClip)(Resources.Load("Audio/Hole" + rand, typeof(AudioClip)));
+            source.Play();
+        }
         string textToAdd = "Score: " + score;
         //text = GetComponent<Text>();
         if (text != null)
         {
             text.text = textToAdd;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag.Contains("good"))
+        {
+            if (!isEvil)
+            {
+                GameObject.Find("GLaDOS").GetComponent<GLaDOS>().FoodInHoleChange(-1);
+                score -= 1;
+            }
+        }
+        else if (other.tag.Contains("bad"))
+        {
+            if (isEvil)
+            {
+                GameObject.Find("GLaDOS").GetComponent<GLaDOS>().FoodInHoleChange(-1);
+                score -= 1;
+            }
         }
     }
 }

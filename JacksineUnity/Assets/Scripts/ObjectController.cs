@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectController : MonoBehaviour {
-
+    public string level;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,7 +16,8 @@ public class ObjectController : MonoBehaviour {
 
 	public GameObject CreateRipple(Vector2 point, bool isPushing, float power)
     {
-        GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
+        int rand = Random.Range(0, 3);
+        GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple " + rand + ((level=="3")?"_space":""));
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
         if (isPushing)
         {
@@ -30,7 +31,7 @@ public class ObjectController : MonoBehaviour {
         }
         rippleObj1.transform.position = point;
 
-        rippleObj1.gameObject.GetComponent<RippleHitObject>().power = power;
+        rippleObj1.transform.GetChild(0).GetComponent<RippleHitObject>().power = power;
    
         Vector3 tranVec = new Vector3(point.x, point.y, 4);
         rippleObj1.transform.position = tranVec;
@@ -38,8 +39,8 @@ public class ObjectController : MonoBehaviour {
         AudioSource source = GetComponent<AudioSource>();
         if (source != null)
         {
-            int rand = Random.Range(1, 5);
-            source.clip = (AudioClip)(Resources.Load("Audio/Light" + rand, typeof(AudioClip)));
+            int randum = Random.Range(1, 5);
+            source.clip = (AudioClip)(Resources.Load("Audio/" + level + "Light" + randum, typeof(AudioClip)));
             source.Play();
         }
 

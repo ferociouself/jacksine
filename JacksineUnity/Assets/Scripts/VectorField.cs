@@ -79,8 +79,12 @@ public class VectorField : MonoBehaviour {
 		}
 
 		if (applyForceTimer >= applyForceThreshold) {
-			GameObject[] objs = GameObject.FindGameObjectsWithTag("Food");
-			foreach (GameObject obj in objs) {
+			GameObject[] goodobjs = GameObject.FindGameObjectsWithTag("goodFood");
+            GameObject[] badobjs = GameObject.FindGameObjectsWithTag("badFood");
+            GameObject[] objs = new GameObject[goodobjs.Length + badobjs.Length];
+            goodobjs.CopyTo(objs, 0);
+            badobjs.CopyTo(objs, goodobjs.Length);
+            foreach (GameObject obj in objs) {
 				Vector2 dir = GetClosestVector (obj.transform.position);
 				obj.GetComponent<Rigidbody2D> ().AddForce (dir * forceMultiplier);
 			}
