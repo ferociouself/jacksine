@@ -16,7 +16,7 @@ public class IslandRippleDyingScript : MonoBehaviour {
 	void Update ()
     {
         timer += 0.01f;
-        if (timer > 3.0f)
+        if (timer > 1.0f)
         {
             GameObject.Destroy(gameObject);
         }

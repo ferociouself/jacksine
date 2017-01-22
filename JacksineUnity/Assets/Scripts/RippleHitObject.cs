@@ -24,7 +24,7 @@ public class RippleHitObject : MonoBehaviour {
 
     public void OnTriggerStay2D(Collider2D blob)
     {
-        if (blob.tag.Contains("ood"))
+        if (blob.tag == "Food" || blob.tag == "goodFood" || blob.tag == "badFood")
         {
             blob.GetComponent<Rigidbody2D>().AddForce(constant * timeleft * (blob.GetComponent<Rigidbody2D>().transform.position - transform.position) * power);
         }
@@ -33,7 +33,7 @@ public class RippleHitObject : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         timepassed += Time.deltaTime;
-        timeleft = 2.0f - timepassed;
+        timeleft = 5.0f - timepassed;
         if (timeleft < 0.0f)
         {
             timeleft = 0.0f;
