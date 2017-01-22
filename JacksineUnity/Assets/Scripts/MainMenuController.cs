@@ -108,11 +108,6 @@ public class MainMenuController : MonoBehaviour {
 			Instructions.SetActive(true);
 			startButton.SetActive(true);
 
-			
-
-			Debug.Log(ZenSelect.GetComponent<RectTransform>().position);
-			Debug.Log(MainSelect.GetComponent<RectTransform>().position);
-
 			initZenPos = ZenSelect.GetComponent<RectTransform>().anchoredPosition;
 			initMainPos = MainSelect.GetComponent<RectTransform>().anchoredPosition;
 			finalZenPos = new Vector2(12.8f, 0.0f);

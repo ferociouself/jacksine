@@ -24,6 +24,5 @@ public class GLaDOS : MonoBehaviour {
     public void FoodInHoleChange(int count)
     {
         foodInHole += count;
-        Debug.Log(foodInHole);
     }
 }

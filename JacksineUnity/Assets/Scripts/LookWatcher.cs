@@ -36,7 +36,7 @@ public class LookWatcher : MonoBehaviour {
         }
 	}
 
-	void OnMouseEnter() { mousing = true; Debug.Log("Mouse Enter"); }
+	void OnMouseEnter() { mousing = true; }
 
 	void OnMouseExit() { mousing = false; }
 }
