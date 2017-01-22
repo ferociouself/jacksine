@@ -14,7 +14,7 @@ public class ObjectController : MonoBehaviour {
 		
 	}
 
-	public GameObject CreateRipple(Vector2 point, bool isPushing)
+	public GameObject CreateRipple(Vector2 point, bool isPushing, float power)
     {
         GameObject ripple = Resources.Load<GameObject>("Prefabs/Ripples/ripple 0");
         GameObject rippleObj1 = GameObject.Instantiate(ripple);
@@ -30,6 +30,8 @@ public class ObjectController : MonoBehaviour {
         }
         rippleObj1.transform.position = point;
 
+        rippleObj1.gameObject.GetComponent<RippleHitObject>().power = power;
+   
         Vector3 tranVec = new Vector3(point.x, point.y, 4);
         rippleObj1.transform.position = tranVec;
 

@@ -15,7 +15,7 @@ public class CollisionSoundScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "Food")
+		if (coll.gameObject.tag.Contains("ood"))
             if (!GetComponent<AudioSource>().isPlaying)
 			    this.gameObject.GetComponent<AudioSource> ().Play ();
 	}
