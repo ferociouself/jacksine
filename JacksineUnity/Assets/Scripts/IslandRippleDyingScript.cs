@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IslandRippleDyingScript : MonoBehaviour {
 
-    public float timer = 0.0f;
+    float timer = 0.0f;
 
 	// Use this for initialization
 	void Start ()
@@ -15,10 +15,10 @@ public class IslandRippleDyingScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        timer += 0.01f;
+        timer += 0.05f;
         if (timer > 1.0f)
         {
-            GameObject.Destroy(gameObject);
+            GameObject.Destroy(this);
         }
 	}
 }
