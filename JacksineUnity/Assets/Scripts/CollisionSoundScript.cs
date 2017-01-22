@@ -17,12 +17,14 @@ public class CollisionSoundScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag.Contains("ood") && level != "Zen") {
-            if (!GetComponent<AudioSource>().isPlaying && !coll.gameObject.GetComponent<AudioSource>().isPlaying)
+		if (coll.gameObject.tag.Contains("ood")) {
+			if (GetComponent<AudioSource>() != null && !GetComponent<AudioSource>().isPlaying)
             {
-                int rand = Random.Range(1, 8);
-                this.gameObject.GetComponent<AudioSource>().clip = (AudioClip)(Resources.Load("Audio/2Hit" + rand + "Low", typeof(AudioClip)));
-                this.gameObject.GetComponent<AudioSource>().Play();
+				if (coll.gameObject.GetComponent<AudioSource>() != null && !coll.gameObject.GetComponent<AudioSource>().isPlaying) {
+	                int rand = Random.Range(1, 8);
+	                this.gameObject.GetComponent<AudioSource>().clip = (AudioClip)(Resources.Load("Audio/2Hit" + rand + "Low", typeof(AudioClip)));
+	                this.gameObject.GetComponent<AudioSource>().Play();
+				}
             }
 		}
 	}
