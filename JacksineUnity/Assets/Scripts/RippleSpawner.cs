@@ -8,6 +8,7 @@ public class RippleSpawner : MonoBehaviour {
 	public bool useEyeTracking = true;
 	private float time;
     public bool isPushing;
+    public float power;
     ObjectController objCont;
 
 	// Use this for initialization
@@ -31,7 +32,7 @@ public class RippleSpawner : MonoBehaviour {
 				    posVec = (Camera.main.ScreenToWorldPoint(point.Screen));
 			}
 			posVec.z = 0;
-			GameObject ripple = objCont.CreateRipple ((Vector2)posVec, isPushing);
+			GameObject ripple = objCont.CreateRipple ((Vector2)posVec, isPushing, power);
 
 			//scale ripple by time waited
 			ripple.transform.GetChild (0).gameObject.GetComponent<Embiggener>().maxSize*=(time/5.0f);

@@ -8,18 +8,10 @@ public class RemoveObject : MonoBehaviour {
     public int score = 0;
     public Text text;
     public bool isEvil;
-    public int scoreModifier = 0;
 
 	// Use this for initialization
 	void Start () {
-		if (isEvil)
-        {
-            scoreModifier = -1;
-        }
-        else
-        {
-            scoreModifier = 1;
-        }
+		
 	}
 	
 	// Update is called once per frame
@@ -32,11 +24,29 @@ public class RemoveObject : MonoBehaviour {
     {
         if (other.tag.Contains("good"))
         {
-            score += (1 * scoreModifier);
+            if (!isEvil)
+            {
+                score += 1;
+                print("Nom! Thanks for feeding the good food to the good whirlpool!");
+            }
+            else
+            {
+                score -= 1;
+                print("Aww. You fed the good whirlpool bad food!");
+            }
         }
         else if (other.tag.Contains("bad"))
         {
-            score += (-1 * scoreModifier); 
+            if (isEvil)
+            {
+                score += 1;
+                print("Great! You fed the bad food to the bad whirlpool!");
+            }
+            else
+            {
+                score -= 1;
+                print("Too bad! You fed the bad whirlpool good food!");
+            }
         }
         //Destroy(other.gameObject);
         AudioSource source = GetComponent<AudioSource>();
