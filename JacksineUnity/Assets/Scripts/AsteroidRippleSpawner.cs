@@ -23,7 +23,7 @@ public class AsteroidRippleSpawner : MonoBehaviour {
         ripple.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         RippleHitObject obj = ripple.transform.GetChild(0).GetComponent<RippleHitObject>();
         obj.constant = -1.0f;
-        obj.power = 0.05f;
+        obj.power = 0.025f;
         obj.timeleft = 0.5f;
         
         
