@@ -15,6 +15,7 @@ public class RippleSpawner : MonoBehaviour {
 	public float indicatorScaleMin;
 	public float indicatorScaleMax;
 	public float indicatorWobblePeriod;
+	public float indicatorWobbleAmplitude;
 	public Transform indicatorPrefab;
 
 	private float chargeTime;
@@ -40,7 +41,9 @@ public class RippleSpawner : MonoBehaviour {
 			chargeTime += Time.deltaTime;
 
 			// change scale of indicator
-			float scale =  indicatorScaleMin + (indicatorScaleMax - indicatorScaleMin) * (1 + Mathf.Sin (chargeTime * 2 * Mathf.PI / indicatorWobblePeriod));
+			float noise = indicatorWobbleAmplitude * Mathf.Sin (chargeTime * 2 * Mathf.PI / indicatorWobblePeriod);
+			float t = Mathf.Max (0f, Mathf.Min (1f, chargeTime / timeToMaxPower));
+			float scale = Mathf.Lerp(indicatorScaleMin, indicatorScaleMax, t) + noise;
 			indicatorClone.localScale = new Vector3 (scale, scale, 1.0f);
 		}
 		if (Input.GetButtonDown ("Shoot")) {
