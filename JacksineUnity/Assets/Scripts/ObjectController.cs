@@ -30,7 +30,7 @@ public class ObjectController : MonoBehaviour {
         }
         rippleObj1.transform.position = point;
 
-        rippleObj1.gameObject.GetComponent<RippleHitObject>().power = power;
+        rippleObj1.transform.GetChild(0).GetComponent<RippleHitObject>().power = power;
    
         Vector3 tranVec = new Vector3(point.x, point.y, 4);
         rippleObj1.transform.position = tranVec;

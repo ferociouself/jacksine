@@ -16,7 +16,7 @@ public class GLaDOS : MonoBehaviour {
 	void Update () {
 		if (foodInHole >= foodCount)
         {
-
+            Camera.main.GetComponent<NoiseTransition>().BeginTransition();
             // LEVEL OVER
         }
 	}
