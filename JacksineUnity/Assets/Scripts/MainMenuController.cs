@@ -24,6 +24,8 @@ public class MainMenuController : MonoBehaviour {
 	public GameObject ZenGaze;
 	public GameObject MainGaze;
 
+    public GameObject Instructions;
+
 	bool menuActive = false;
 
 	bool begun = false;
@@ -103,11 +105,10 @@ public class MainMenuController : MonoBehaviour {
 		if (ColTimedLerp()) {
 			menuActive = true;
 			//Turn on new buttons
-			instButton.SetActive(true);
+			Instructions.SetActive(true);
 			startButton.SetActive(true);
 
-			ZenGaze.SetActive(true);
-			MainGaze.SetActive(true);
+			
 
 			Debug.Log(ZenSelect.GetComponent<RectTransform>().position);
 			Debug.Log(MainSelect.GetComponent<RectTransform>().position);
@@ -169,8 +170,10 @@ public class MainMenuController : MonoBehaviour {
 		if (pos_transTime > POS_LERP_TIME) {
 			pos_transTime = 0.0f;
 			pos_Lerping = false;
-			return true;
-		}  else {
+            ZenGaze.SetActive(true);
+            MainGaze.SetActive(true);
+            return true;
+        }  else {
 			pos_transTime += Time.deltaTime;
 			return false;
 		}
@@ -179,12 +182,16 @@ public class MainMenuController : MonoBehaviour {
 	public void MoveZen(int dir) {
 		curZenX += dir * 5.0f;
 		ZenSelect.GetComponent<RectTransform>().anchoredPosition = new Vector2(curZenX, 0.0f);
-		Debug.Log("Move Zen" + curZenX);
 	}
 
 	public void MoveMain(int dir) {
 		curMainX += dir * 5.0f;
 		MainSelect.GetComponent<RectTransform>().anchoredPosition = new Vector2(curMainX, 0.0f);
 	}
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 }
